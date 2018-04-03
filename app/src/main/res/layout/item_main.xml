@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/sqlite_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:paddingBottom="8dip"
+            android:textSize="16sp"
+            android:textColor="#1a1a1a" />
+
+        <TextView
+            android:id="@+id/link"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="http://url.com"
+            android:textSize="13sp"
+            android:textColor="#0645AD"
+            android:layout_below="@id/title"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:src="@mipmap/ic_keyboard_arrow_right_black_36dp" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/toolbar"/>
+
+    <ListView
+        android:id="@id/list"
+        android:visibility="visible"
+        android:layout_below="@id/layoutHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#bababa"
+        android:dividerHeight="1dp"
+        android:background="@color/white"
+        android:cacheColorHint="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/noConnectionLayout"
+        android:visibility="gone"
+        android:layout_below="@id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/no_connection"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No Connection"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

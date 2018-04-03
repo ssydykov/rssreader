@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:padding="16dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/txtUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:inputType="textUri"
+            android:hint="Enter URL (http://abc.com)"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            app:met_floatingLabel="highlight"
+            app:met_helperTextColor="@color/red"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtUrl"
+            android:text="Submit" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSubmit"
+            android:text="Cancel"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
